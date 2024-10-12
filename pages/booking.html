@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./booking.css">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body>
+    <nav class="socials flex justify-between p-3 px-6">
+        <img src="../assets/The Paul's Effect 1.png" alt="" class="h-12">
+        <img src="../assets/Group 1.png" alt="" onclick="showNav()" class="logo h-12 cursor-pointer">
+    </nav>
+    <div class="hidden_nav" id="hidden_nav">
+        <ul>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="./about.html">About</a></li>
+            <li><a href="./booking.html">Booking</a></li>
+        </ul>
+    </div>
+
+    <!-- Form Container -->
+    <div class="container mx-auto py-12 px-6">
+        <h1 class="text-3xl font-extrabold text-center mb-8">Thank you for your interest in booking Paul Tomisin</h1>
+
+        <!-- Form -->
+        <form class="bg-white p-8 rounded-lg shadow-lg space-y-6">
+
+            <!-- Personal Information -->
+            <div>
+                <label for="name" class="block text-sm font-bold text-gray-700">Name:</label>
+                <input type="text" id="name" name="name"
+                    class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500 p-3">
+            </div>
+            <div>
+                <label for="name" class="block text-sm font-bold text-gray-700">Name Of Ministry</label>
+                <input type="text" id="name" name="name"
+                    class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500 p-3">
+            </div>
+
+            <div>
+                <label for="email" class="block text-sm font-bold text-gray-700">Contact Email:</label>
+                <input type="email" id="email" name="email"
+                    class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500 p-3">
+            </div>
+
+            <div>
+                <label for="phone" class="block text-sm font-bold text-gray-700">Contact Phone Number:</label>
+                <input type="tel" id="phone" name="phone"
+                    class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500 p-3">
+            </div>
+            <!-- Event Information Section -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+
+                <!-- Event Country -->
+                <div>
+                    <label for="event-country" class="block text-sm font-bold text-gray-700">Event Country</label>
+                    <select id="event-country" name="event-country"
+                        class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500 p-3">
+                        <option>Nigeria</option>
+                        <!-- Add more options as needed -->
+                    </select>
+                </div>
+
+                <!-- Event State -->
+                <div>
+                    <label for="event-state" class="block text-sm font-bold text-gray-700">Event State</label>
+                    <select id="event-state" name="event-state"
+                        class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500 p-3">
+                        <option>Lagos</option>
+                        <!-- Add more options as needed -->
+                    </select>
+                </div>
+
+                <!-- Event City -->
+                <div>
+                    <label for="event-city" class="block text-sm font-bold text-gray-700">Event City</label>
+                    <select id="event-city" name="event-city"
+                        class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500 p-3">
+                        <option>Meiran</option>
+                        <!-- Add more options as needed -->
+                    </select>
+                </div>
+            </div>
+
+            <!-- Ministration Information Section -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+
+                <!-- Event Date -->
+                <div>
+                    <label for="event-date" class="block text-sm font-bold text-gray-700">Event Date</label>
+                    <input type="date" id="event-date" name="event-date"
+                        class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500 p-3"
+                        value="2024-03-19">
+                </div>
+
+                <!-- Ministration Time -->
+                <div>
+                    <label for="ministration-time" class="block text-sm font-bold text-gray-700">Ministration
+                        Time</label>
+                    <input type="text" id="ministration-time" name="ministration-time"
+                        class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500 p-3"
+                        value="10am - 11am">
+                </div>
+
+                <!-- Ministration Duration -->
+                <div>
+                    <label for="ministration-duration" class="block text-sm font-bold text-gray-700">Ministration
+                        Duration</label>
+                    <select id="ministration-duration" name="ministration-duration"
+                        class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500 p-3">
+                        <option>1 hour</option>
+                        <!-- Add more options as needed -->
+                    </select>
+                </div>
+            </div>
+
+            <!-- Additional Information -->
+            <div>
+                <label for="purpose" class="block text-sm font-bold text-gray-700">Expected attendance</label>
+                <input type="text" id="purpose" name="purpose"
+                    class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500 p-3">
+            </div>
+            <div>
+                <label for="purpose" class="block text-sm font-bold text-gray-700">Demographics of Expected attendance
+                    (Age range, gender)</label>
+                <input type="text" id="purpose" name="purpose"
+                    class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500 p-3">
+            </div>
+            <div>
+                <label for="purpose" class="block text-sm font-bold text-gray-700">What time will your event last for,
+                    and will we need to lodge before and after?</label>
+                <input type="text" id="purpose" name="purpose"
+                    class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500 p-3">
+            </div>
+            <div>
+                <label for="purpose" class="block text-sm font-bold text-gray-700">Theme of the program:</label>
+                <input type="text" id="purpose" name="purpose"
+                    class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500 p-3">
+            </div>
+
+            <div>
+                <label for="details" class="block text-sm font-bold text-gray-700">In a few words tell us about the aim
+                    of the event, God's heart for the program.
+                    And why you would want Minister Paul at this event:</label>
+                <textarea id="details" name="details" rows="4"
+                    class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500 p-3"></textarea>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+
+                <!-- Event Date -->
+                <div>
+                    <label for="ministration-duration" class="block text-sm font-bold text-gray-700">Do you have plans
+                        for monetary
+                        welfare for the team</label>
+                    <select id="ministration-duration" name="ministration-duration"
+                        class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500 p-3">
+                        <option>Yes</option>
+                        <option>No</option>
+                        <!-- Add more options as needed -->
+                    </select>
+                </div>
+                <div>
+                    <label for="ministration-duration" class="block text-sm font-bold text-gray-700">Social Media Handle
+                        of
+                        Ministry</label>
+                    <select id="ministration-duration" name="ministration-duration"
+                        class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500 p-3">
+                        <option>Yes</option>
+                        <option>No</option>
+                        <!-- Add more options as needed -->
+                    </select>
+                </div>
+                <div>
+                    <label for="ministration-duration" class="block text-sm font-bold text-gray-700">Social Media Handle
+                        of Host</label>
+                    <input type="text" id="purpose" name="purpose"
+                        class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500 p-3">
+                </div>
+            </div>
+            <div>
+                <label for="details" class="block text-sm font-bold text-gray-700">Additional Information: Please share
+                    any information you would like us to note.</label>
+                <textarea id="details" name="details" rows="4"
+                    class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500 p-3"></textarea>
+            </div>
+
+
+            <!-- Acknowledgment -->
+            <div class="space-y-4">
+                <!-- First Acknowledgment -->
+                <div>
+                    <label for="confirmation" class="block text-sm font-bold text-gray-700">
+                        I agree that where applicable and depending on the nature of each meeting/event the following
+                        (but not limited to) - travel expenses, fees, visa processing fees, covid testing, lodging and
+                        feeding etc.,
+                        might be required. Should Paul Tomisin confirm the invitation, more details will be included in
+                        an agreement
+                        letter that will be sent via email.
+                    </label>
+                    <div class="flex items-center gap-2 mt-2">
+                        <input type="checkbox" id="confirmation" name="confirmation"
+                            class="h-4 w-4 text-blue-600 border-gray-300 rounded focus:ring-blue-500">
+                        <span class="text-sm text-gray-700">I understand</span>
+                    </div>
+                </div>
+
+                <!-- Second Acknowledgment -->
+                <div>
+                    <label for="recording-confirmation" class="block text-sm font-bold text-gray-700">
+                        Could you please confirm that we will receive a recording of the ministration within 7 days of
+                        the event?
+                    </label>
+
+                    <!-- Yes/No Options -->
+                    <div class="mt-2 space-y-2">
+                        <div class="flex items-center gap-2">
+                            <input type="checkbox" id="recording-yes" name="recording" value="yes"
+                                class="h-4 w-4 text-blue-600 border-gray-300 rounded focus:ring-blue-500">
+                            <span class="text-sm text-gray-700">Yes</span>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <input type="checkbox" id="recording-no" name="recording" value="no"
+                                class="h-4 w-4 text-blue-600 border-gray-300 rounded focus:ring-blue-500">
+                            <span class="text-sm text-gray-700">No</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </form>
+    </div>
+    <footer class="w-full mt-6">
+        <div class="socials flex justify-between p-3 px-6">
+            <img src="../assets/The Paul's Effect 1.png" alt="" class="h-12">
+            <!-- Social and Music Platforms -->
+            <div class="social_and_music_platforms flex gap-3">
+                <div class="circle">
+                    <i class="fab fa-spotify"></i> 
+                </div>
+                <div class="circle">
+                    <i class="fab fa-youtube"></i>
+                </div>
+                <div class="circle">
+                    <i class="fab fa-tiktok"></i> 
+                </div>
+                <div class="circle">
+                    <i class="fab fa-x"></i> 
+                </div>
+                <div class="circle">
+                    <i class="fab fa-instagram"></i> 
+                </div>
+            </div>
+        </div>
+        <div class="authorithies p-2 px-4 text-gray-600 flex align-center justify-center">
+            <span>©️ 2024 Paul Tomisin. Built with 🖤 by <b>RCCG Watchtower Tech Team</b></span>
+        </div>
+    </footer>
+    <script src="../main.js"></script>
+</body>
+
+</html>

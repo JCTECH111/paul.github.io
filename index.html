@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- TailwindCSS CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+
+
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <main>
+        <section id="loader" class="fixed inset-0 w-full  bg-cover bg-center z-50 ">
+            <!-- Transparent dark overlay -->
+            <div class="absolute inset-0 black">
+                <!-- Image that grows like a heartbeat -->
+                <img src="./assets/The Paul's Effect 1.png" alt="logo" class="animate-heartbeat">
+            </div>
+        </section>
+        <section id="content" class="relative for_loding">
+            <section class="main_view relative">
+                <nav class="w-full px-6 py-2 h-20 relative flex justify-between align-items">
+                    <img src="./assets/The Paul's Effect 1.png" alt="" class="logo h-16">
+                    <img src="./assets/Group 1.png" alt="" onclick="showNav()"
+                        class="logo h-12 cursor-pointer">
+                </nav>
+                <div class="hidden_nav" id="hidden_nav">
+                    <ul>
+                        <li><a href="./index.html">Home</a></li>
+                        <li><a href="./pages/about.html">About</a></li>
+                        <li><a href="./pages/booking.html">Booking</a></li>
+                    </ul>
+                </div>
+                <div class="view_about flex flex-col gap-2 justify-center align-center">
+                    <h5>OFFICIAL WEBSITE OF PAUL TOMISIN</h5>
+                    <h2>BIOGRAPHY OF PAUL TOMISIN</h2>
+                    <p>Paul Tomisin is a Nigerian gospel singer, songwriter, plays several instruments and an
+                        entrepreneur. He is a unique and dynamic singer whose music span unique and dynamic singer w</p>
+                </div>
+            </section>
+            <section class="biography w-full">
+                <div class="left">
+                    <div class="heading">
+                        <span>BRIEF</span>
+                        <h1>BIOGRAPHY OF PAUL TOMISIN</h1>
+                    </div>
+                </div>
+                <div class="right">
+                    <p class="text-gray-600 font-bold">Paul Tomisin is a Nigerian gospel singer, songwriter, plays
+                        several instruments and an entrepreneur. He is a unique and dynamic singer whose music span
+                        across different genres such as worship, hymns and medleys</p>
+                    <p class="text-gray-600 font-bold">
+                        A prophetic minstrel popularly known for his revival chants and hit singles like Adura, Jericho
+                        and Maranatha.
+                    </p>
+                    <p class="text-gray-600 font-bold">
+                        Paul Tomisin was born on the 25th of February , in Lagos Nigeria and hails from..
+                    </p>
+
+                    <button class="readmore px-6 py-4 rounded-2xl ">
+                        Read More
+                    </button>
+                </div>
+            </section>
+        </section>
+        <section class="albums w-full relative for_loding">
+            <div class="head p-6 flex w-full flex flex-col gap-3">
+                <span>MUSIC</span>
+                <h1 class="text-2xl font-bold">Get all albums and singles on Spotify, Apple Music,</h1>
+                <h1 class="text-2xl font-bold">and Audiomack</h1>
+                <div class="platform flex space-x-4 mt-3">
+                    <div class="circle border-2 border-white rounded-full p-4">
+                        <i class="fab fa-spotify text-white text-3xl"></i>
+                    </div>
+                    <div class="circle border-2 border-white rounded-full p-4">
+                        <i class="fas fa-music text-white text-3xl"></i>
+                    </div>
+                    <div class="circle border-2 border-white rounded-full p-4">
+                        <i class="fab fa-soundcloud text-white text-3xl"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="music_albums w-full flex gap-3 relative align-center justify-center p-3">
+                <img src="./assets/Rectangle 9.png" alt="">
+                <img src="./assets/Rectangle 10.png" alt="">
+                <img src="./assets/Rectangle 11.png" alt="">
+                <img src="./assets/Rectangle 12.png" alt="">
+            </div>
+        </section>
+        <section class="youtube_videos w-full flex flex-col mt-6 for_loding">
+            <div class="head w-full flex flex-col p-6 gap-3">
+                <span>
+                    VIDEOS
+                </span>
+                <h1 class="text-2xl font-bold text-gray-600">LIVE AND FEATURING VIDEOS</h1>
+            </div>
+            <div class="youtube-container p-4 align-center justify-center">
+                <div class="youtube">
+                    <div class="youtube_image">
+                        <i class="fab fa-youtube"></i>
+                    </div>
+                    <p>Encounter Room with Paul Tomisin and BBO</p>
+                </div>
+                <div class="youtube">
+                    <div class="youtube_image two">
+                        <i class="fab fa-youtube"></i>
+                    </div>
+                    <p>Paul Tomisin @ Highland Church || 2024 Cross ...</p>
+                </div>
+                <div class="youtube">
+                    <div class="youtube_image three">
+                        <i class="fab fa-youtube"></i>
+                    </div>
+                    <p>Paul Tomisin Live @ Atmosphere...</p>
+                </div>
+            </div>
+            <button class=" px-6 py-4 rounded-2xl mt-9">
+                Read More
+            </button>
+        </section>
+        <footer class="w-full mt-6 for_loding">
+            <div class="top_footer">
+                <span class="">MINISTRY</span>
+                <h1 class="text-3xl font-bold">HEARLD MINISTRY, WE WOULD NEVER STOP!</h1>
+                <p>A prophetic minstrel popularly known for his revival chants and hit singles like Adura, Jericho and
+                    Maranatha. </p>
+                <p>Paul Tomisin was born on the 25th o</p>
+            </div>
+            <div class="socials flex justify-between p-3 px-6">
+                <img src="./assets/The Paul's Effect 1.png" alt="" class="h-12">
+                <!-- Social and Music Platforms -->
+                <div class="social_and_music_platforms flex gap-3">
+                    <div class="circle">
+                        <i class="fab fa-spotify"></i> 
+                    </div>
+                    <div class="circle">
+                        <i class="fab fa-youtube"></i>
+                    </div>
+                    <div class="circle">
+                        <i class="fab fa-tiktok"></i> 
+                    </div>
+                    <div class="circle">
+                        <i class="fab fa-x"></i> 
+                    </div>
+                    <div class="circle">
+                        <i class="fab fa-instagram"></i> 
+                    </div>
+                </div>
+            </div>
+            <div class="authorithies p-2 px-4 text-gray-600 flex align-center justify-center">
+                <span>©️ 2024 Paul Tomisin. Built with 🖤 by <b>RCCG Watchtower Tech Team</b></span>
+            </div>
+        </footer>
+    </main>
+    <script src="./main.js"></script>
+</body>
+
+</html>
